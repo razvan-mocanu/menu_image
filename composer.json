@@ -6,9 +6,14 @@
   "license": "GPL-2.0+",
   "homepage": "https://www.drupal.org/project/menu_image",
   "minimum-stability": "dev",
-  "support": {
-    "issues": "https://www.drupal.org/project/issues/menu_image",
-    "source": "http://cgit.drupalcode.org/menu_image"
-  },
+  "authors": [
+    {
+      "name": "Razvan Mocanu",
+      "email": "razvan@mocanu.biz",
+      "homepage": "https://mocanu.biz",
+      "role": "Maintainer"
+    }
+  ],
+  "support": { },
   "require": { }
 }
