@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * @file
+ * Contains menu_image.module.
+ */
+
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function menu_image_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the menu_image module.
+    case 'help.page.menu_image':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Add image to menu items.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_entity_base_field_info().
+ */
+function menu_image_entity_base_field_info(EntityTypeInterface $entity_type) {
+  $fields = [];
+
+  if ($entity_type->id() === 'menu_link_content') {
+    $fields['thumbnail'] = BaseFieldDefinition::create('image')
+      ->setLabel(t('Image'))
+      ->setDescription(t('Menu item image.'))
+      ->setRevisionable(TRUE)
+      ->setTranslatable(TRUE)
+      ->setDisplayOptions('form', [
+        'type' => 'image',
+        'weight' => 5,
+      ]);
+  }
+
+  return $fields;
+}
