@@ -53,8 +53,6 @@ function menu_image_entity_base_field_info(EntityTypeInterface $entity_type) {
       'Tools' => 'Tools'
     ];
 
-    //$ids = "Train\nTarget\nSbahn\nDiagram\nBubbles\nStack";
-
     $fields['icon'] = BaseFieldDefinition::create('list_string')
       ->setLabel(t('Image ID'))
       ->setDescription(t('ID of predefined image'))
