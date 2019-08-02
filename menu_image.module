@@ -43,12 +43,14 @@ function menu_image_entity_base_field_info(EntityTypeInterface $entity_type) {
       ]);
 
     $ids = [
-      'Train' => 'Train',
-      'Target' => 'Target',
-      'Sbahn' => 'Sbahn',
-      'Diagram' => 'Diagram',
-      'Bubbles' => 'Bubbles',
-      'Stack' => 'Stack'
+      'Arbeitsplatz' => 'Arbeitsplatz',
+      'RZ' => 'RZ',
+      'DB Team' => 'DB Team',
+      'Technisches PM' => 'Technisches PM',
+      'Das Projekt' => 'Das Projekt',
+      'Arbeitsgebiete' => 'Arbeitsgebiete',
+      'Infoportal' => 'Infoportal',
+      'Tools' => 'Tools'
     ];
 
     //$ids = "Train\nTarget\nSbahn\nDiagram\nBubbles\nStack";
